@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "deliciousbread481.simplytentsridingfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "simplytentsridingfix.refmap.json",
+  "mixins": [
+    "MyGeoBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
