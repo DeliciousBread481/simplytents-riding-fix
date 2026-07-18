@@ -18,4 +18,4 @@ public class MyGeoBlockMixin {
     private boolean simplytentsridingfix$allowPackWhileRiding(Player player) {
         return player.isCrouching() || player.isPassenger();
     }
-}0
+}

@@ -55,23 +55,14 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    
+    implementation fg.deobf(files('libs/simplytents-2.0.9.2.jar'))
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 tasks.named('processResources', ProcessResources).configure {
-    var replaceProperties = [
-        minecraft_version: minecraft_version,
-        forge_version    : forge_version,
-        mod_id           : mod_id,
-        mod_name         : mod_name,
-        mod_version      : mod_version
-    ]
-    inputs.properties replaceProperties
-
-    filesMatching(['META-INF/mods.toml']) {
-        expand replaceProperties
-    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
 
 tasks.named('jar', Jar).configure {

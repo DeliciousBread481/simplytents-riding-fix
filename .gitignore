@@ -22,3 +22,5 @@ eclipse/
   
 # OS  
 .DS_Store
+
+*.py
